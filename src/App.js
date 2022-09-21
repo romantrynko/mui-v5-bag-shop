@@ -2,6 +2,7 @@ import './App.css';
 import { Button, Container, ThemeProvider } from '@mui/material';
 import { useEffect } from 'react';
 import theme from './styles/theme';
+import Appbar from './components/appbar';
 
 function App() {
   useEffect(() => {
@@ -26,6 +27,7 @@ function App() {
           // Searchbox
           // Appdrawer
         }
+        <Appbar/>
         <Button variant='contained'>Test</Button>
       </Container>
     </ThemeProvider>
