@@ -8,6 +8,7 @@ import {
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PersonIcon from '@mui/icons-material/Person';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import { Colors } from '../../styles/theme';
 
 const Actions = ({ matches }) => {
   const Component = matches
@@ -21,7 +22,8 @@ const Actions = ({ matches }) => {
           <ListItemIcon
             sx={{
               display: 'flex',
-              justifyContent: 'center'
+              justifyContent: 'center',
+              color: matches && Colors.secondary
             }}
           >
             <ShoppingCartIcon />
@@ -36,7 +38,8 @@ const Actions = ({ matches }) => {
           <ListItemIcon
             sx={{
               display: 'flex',
-              justifyContent: 'center'
+              justifyContent: 'center',
+              color: matches && Colors.secondary
             }}
           >
             <PersonIcon />
@@ -51,7 +54,8 @@ const Actions = ({ matches }) => {
           <ListItemIcon
             sx={{
               display: 'flex',
-              justifyContent: 'center'
+              justifyContent: 'center',
+              color: matches && Colors.secondary
             }}
           >
             <FavoriteIcon />

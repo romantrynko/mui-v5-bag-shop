@@ -28,7 +28,6 @@ function App() {
           // Appdrawer
         }
         <Appbar/>
-        <Button variant='contained'>Test</Button>
       </Container>
     </ThemeProvider>
   );
