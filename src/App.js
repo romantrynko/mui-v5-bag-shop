@@ -1,11 +1,11 @@
 import './App.css';
-import { Button, Container, ThemeProvider } from '@mui/material';
 import { useEffect } from 'react';
 import theme from './styles/theme';
 import Appbar from './components/appbar';
 import Banner from './components/banner';
 import Promotions from './components/promotions';
 import Products from './components/products';
+import { Box, Container, ThemeProvider, Typography } from '@mui/material';
 
 function App() {
   useEffect(() => {
@@ -33,7 +33,12 @@ function App() {
         <Appbar />
         <Banner />
         <Promotions />
-        <Products/>
+        <Box display={'flex'} justifyContent={'center'} p={4}>
+          <Typography variant='h4'>
+            Our Products
+          </Typography>
+        </Box>
+        <Products />
       </Container>
     </ThemeProvider>
   );
