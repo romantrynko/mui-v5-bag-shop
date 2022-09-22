@@ -1,6 +1,7 @@
 import { IconButton } from '@mui/material';
 import React from 'react';
 import { AppbarContainer, AppbarHeader } from '../../styles/appbar';
+import Actions from './actions';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 
@@ -19,6 +20,7 @@ const AppbarMobile = ({ matches }) => {
       <IconButton>
         <SearchIcon />
       </IconButton>
+      <Actions matches={matches} />
     </AppbarContainer>
   );
 };
