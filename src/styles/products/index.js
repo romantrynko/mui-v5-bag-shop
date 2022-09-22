@@ -28,8 +28,8 @@ export const ProductActionButton = styled(IconButton)(() => ({
   margin: 4
 }))
 
-export const ProductFavButton = styled(ProductActionButton)(({ isFav, theme }) => ({
-  color: isFav ? Colors.primary : Colors.light,
+export const ProductFavButton = styled(ProductActionButton)(({ isfav, theme }) => ({
+  color: isfav ? Colors.primary : Colors.light,
   [theme.breakpoints.up('md')]: {
     position: 'absolute',
     right: 0,
