@@ -2,6 +2,7 @@ import { Container, Grid, useMediaQuery, useTheme } from '@mui/material'
 import React from 'react'
 import { products } from '../../data';
 import SingleProduct from './SingleProduct';
+import SingleProductDesktop from './SingleProductDesktop';
 
 const Products = () => {
 
@@ -18,7 +19,11 @@ const Products = () => {
       flexDirection={'column'}
       alignItems={'center'}
     >
-      <SingleProduct product={product} matches={matches} />
+      {
+        matches
+          ? <SingleProduct product={product} matches={matches} />
+          : <SingleProductDesktop product={product} matches={matches} />
+      }
     </Grid>
   ))
 

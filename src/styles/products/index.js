@@ -33,7 +33,7 @@ export const ProductFavButton = styled(ProductActionButton)(({ isfav, theme }) =
   [theme.breakpoints.up('md')]: {
     position: 'absolute',
     right: 0,
-    top: 0
+    top: '5px'
   }
 }))
 
@@ -42,8 +42,8 @@ export const ProductAddToCart = styled(Button)(({ show, theme }) => ({
   fontSize: '12px',
   [theme.breakpoints.up('md')]: {
     position: 'absolute',
-    bottom: '2%',
-    width: '300px',
+    bottom: '4%',
+    width: '90%',
     padding: '10px 5px',
     animation: show && `${slideInBottom} 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both`
   },
@@ -63,7 +63,7 @@ export const ProductActionsWrapper = styled(Box)(({ show, theme }) => ({
     display: show ? 'visible' : 'none',
     position: 'absolute',
     right: 0,
-    top: '20%',
+    top: '55px',
     animation: show && `${slideInRight} 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both`
   }
 }))
