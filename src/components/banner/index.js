@@ -1,11 +1,12 @@
 import { Typography, useMediaQuery, useTheme } from '@mui/material';
 import React from 'react'
 import {
-    BannerContainer,
-    BannerContent,
-    BannerTitle,
-    BannerDescription,
-    BannerImage
+  BannerContainer,
+  BannerContent,
+  BannerTitle,
+  BannerDescription,
+  BannerImage,
+  BannerShopButton
 } from '../../styles/banner';
 
 const Banner = () => {
@@ -22,6 +23,7 @@ const Banner = () => {
         <BannerDescription variant='subtitle'>
           Our mission is to organize the world’s information and make it universally accessible and useful.
         </BannerDescription>
+        <BannerShopButton color='primary'>Show Now</BannerShopButton>
       </BannerContent>
     </BannerContainer>
   )
