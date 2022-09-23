@@ -1,4 +1,5 @@
-import { createTheme, lighten } from '@mui/material';
+import { createTheme } from '@mui/material';
+import { lighten } from 'polished'
 
 export const Colors = {
   primary: '#5f2c3e',
@@ -46,19 +47,31 @@ const theme = createTheme({
     MyShopButton: {
       styleOverrides: {
         root: {
-          color: Colors.white
+          color: Colors.white,
         },
         primary: {
           background: Colors.primary,
-          '&:hover': {
-            background: lighten(0.05, Colors.primary)
-          }
-        }
+          "&:hover": {
+            background: lighten(0.05, Colors.primary),
+          },
+        },
+        secondary: {
+          background: `${Colors.secondary}`,
+          "&:hover": {
+            background: lighten(0.05, Colors.primary),
+          },
+        },
       },
-      secondary: {
-        background: Colors.secondary,
-        '&:hover': {
-          background: lighten(0.05, Colors.secondary)
+    },
+
+    MuiDrawer: {
+      styleOverrides: {
+        paper: {
+          width: 250,
+          background: Colors.primary,
+          color: Colors.secondary,
+          borderRadius: '0 100px 0 0',
+          borderRight: `4px solid ${Colors.secondary}`
         }
       }
     }

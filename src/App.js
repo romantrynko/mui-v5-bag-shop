@@ -6,6 +6,8 @@ import Banner from './components/banner';
 import Promotions from './components/promotions';
 import Products from './components/products';
 import { Box, Container, ThemeProvider, Typography } from '@mui/material';
+import Footer from './components/footer';
+import AppDrawer from './components/drawer';
 
 function App() {
   useEffect(() => {
@@ -39,6 +41,8 @@ function App() {
           </Typography>
         </Box>
         <Products />
+        <Footer />
+        <AppDrawer/>
       </Container>
     </ThemeProvider>
   );
