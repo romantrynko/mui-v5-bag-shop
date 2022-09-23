@@ -8,6 +8,7 @@ import Products from './components/products';
 import { Box, Container, ThemeProvider, Typography } from '@mui/material';
 import Footer from './components/footer';
 import AppDrawer from './components/drawer';
+import { UIProvider } from './context/ui';
 
 function App() {
   useEffect(() => {
@@ -22,27 +23,19 @@ function App() {
           background: '#fff'
         }}
       >
-        {
-          // Appbar
-          // Banner
-          // Promotions
-          // Title
-          // Products
-          // Footer
-          // Searchbox
-          // Appdrawer
-        }
-        <Appbar />
-        <Banner />
-        <Promotions />
-        <Box display={'flex'} justifyContent={'center'} p={4}>
-          <Typography variant='h4'>
-            Our Products
-          </Typography>
-        </Box>
-        <Products />
-        <Footer />
-        <AppDrawer/>
+        <UIProvider>
+          <Appbar />
+          <Banner />
+          <Promotions />
+          <Box display={'flex'} justifyContent={'center'} p={4}>
+            <Typography variant='h4'>
+              Our Products
+            </Typography>
+          </Box>
+          <Products />
+          <Footer />
+          <AppDrawer />
+        </UIProvider>
       </Container>
     </ThemeProvider>
   );

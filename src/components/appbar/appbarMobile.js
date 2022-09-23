@@ -2,13 +2,17 @@ import { IconButton } from '@mui/material';
 import React from 'react';
 import { AppbarContainer, AppbarHeader } from '../../styles/appbar';
 import Actions from './actions';
+import { useUIContext } from '../../context/ui';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 
 const AppbarMobile = ({ matches }) => {
+
+  const { setDrawerOpen } = useUIContext()
+
   return (
     <AppbarContainer>
-      <IconButton>
+      <IconButton onClick={() => setDrawerOpen(true)}>
         <MenuIcon />
       </IconButton>
       <AppbarHeader
