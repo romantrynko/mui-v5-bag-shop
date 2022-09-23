@@ -9,6 +9,7 @@ import { Box, Container, ThemeProvider, Typography } from '@mui/material';
 import Footer from './components/footer';
 import AppDrawer from './components/drawer';
 import { UIProvider } from './context/ui';
+import SearchBox from './components/search';
 
 function App() {
   useEffect(() => {
@@ -35,6 +36,7 @@ function App() {
           <Products />
           <Footer />
           <AppDrawer />
+          <SearchBox/>
         </UIProvider>
       </Container>
     </ThemeProvider>

@@ -8,7 +8,7 @@ import SearchIcon from '@mui/icons-material/Search';
 
 const AppbarMobile = ({ matches }) => {
 
-  const { setDrawerOpen } = useUIContext()
+  const { setDrawerOpen, setShowSearchBox } = useUIContext()
 
   return (
     <AppbarContainer>
@@ -22,7 +22,7 @@ const AppbarMobile = ({ matches }) => {
         My Bags
       </AppbarHeader>
       <IconButton>
-        <SearchIcon />
+        <SearchIcon onClick={() => setShowSearchBox(true)} />
       </IconButton>
       <Actions matches={matches} />
     </AppbarContainer>
