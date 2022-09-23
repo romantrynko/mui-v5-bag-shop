@@ -4,13 +4,16 @@ import {
   AppbarContainer,
   AppbarHeader,
   MyList,
-  ActionIconsContainerMobile,
-  ActionIconsContainerDesktop
 } from '../../styles/appbar';
 import SearchIcon from '@mui/icons-material/Search';
 import Actions from './actions';
+import { useUIContext } from '../../context/ui';
 
 const AppbarDesktop = ({ matches }) => {
+
+  const { showSearchBox, setShowSearchBox } = useUIContext()
+
+
   return (
     <AppbarContainer>
       <AppbarHeader>My Bags</AppbarHeader>
@@ -21,7 +24,7 @@ const AppbarDesktop = ({ matches }) => {
         <ListItemText primary='Contact Us' />
         <ListItemButton>
           <ListItemIcon>
-            <SearchIcon />
+            <SearchIcon onClick={() => setShowSearchBox(true)} />
           </ListItemIcon>
         </ListItemButton>
       </MyList>
