@@ -1,10 +1,13 @@
 import React from 'react'
-import { Box, Dialog, DialogContent, DialogTitle, IconButton, Slide, styled } from '@mui/material';
-import { Close } from '@mui/icons-material';
+import { Box, Button, Dialog, DialogContent, DialogTitle, IconButton, Slide, styled } from '@mui/material';
+import { Close, Facebook, Favorite } from '@mui/icons-material';
 import { Colors } from '../../styles/theme';
 import { ProductImage, Product } from '../../styles/products';
 import { Typography, useMediaQuery } from '@mui/material';
 import { useTheme } from '@emotion/react';
+import IncDec from '../ui';
+import { Instagram } from '@mui/icons-material';
+import { Twitter } from '@mui/icons-material';
 
 const SlideTransition = (props) => {
   return <Slide direction='down' {...props} />
@@ -42,7 +45,7 @@ const ProductDetails = ({ open, onClose, product }) => {
           alignItems='center'
           justifyContent='space-between'
         >
-          Product title
+          {product.name}
           <IconButton onClick={onClose}>
             <Close />
           </IconButton>
@@ -61,11 +64,32 @@ const ProductDetails = ({ open, onClose, product }) => {
             <Typography sx={{ lineHeight: 2 }} variant='h4'>{product.name}</Typography>
 
             <Typography variant='body'>
-              {product.name}
-              {product.name}
-              {product.name}
+              {product.description}
+              {product.description}
+              {product.description}
             </Typography>
-      
+
+            <Box sx={{ mt: 4 }} display='flex' alignItems='center' justifyContent='space-between'>
+              <IncDec />
+              <Button variant='contained'>Add to cart</Button>
+            </Box>
+            <Box display='flex'
+              alignItems={'center'}
+              sx={{ mt: 4, color: Colors.light }}
+            >
+              <Favorite />
+              Add to wishlist
+            </Box>
+
+            <Box
+
+              sx={{ mt: 4, color: Colors.light }}
+            >
+              <Facebook sx={{ mr: 1 }} />
+              <Twitter sx={{ mr: 1 }} />
+              <Instagram />
+            </Box>
+
           </ProductDetailInfoWrapper>
         </ProductDetailWrapper>
       </DialogContent>

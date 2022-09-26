@@ -4,8 +4,8 @@ import { lighten, borderColor } from 'polished';
 export const DrawerWidth = 250;
 
 export const Colors = {
-  primary: '#5f2c3e',
-  secondary: '#d1adcc',
+  primary: '#2c3e5f',
+  secondary: '#add1c6',
   success: '#4CAF50',
   info: '#00a2ff',
   danger: '#FF5722',
@@ -40,6 +40,13 @@ const theme = createTheme({
 
   components: {
     MuiButton: {
+      styleOverrides: {
+        root: {
+          fontSize: '14px',
+          color: Colors.white
+        },
+
+      },
       defaultProps: {
         disableRipple: true,
         disableElevation: true
