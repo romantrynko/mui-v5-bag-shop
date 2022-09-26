@@ -30,7 +30,7 @@ export default function SingleProduct({ product, matches }) {
         <ProductActionsWrapper>
           
           <Stack direction={'row'}>
-            <ProductFavButton isfav={0}>
+            <ProductFavButton isfav={1}>
               <Favorite />
             </ProductFavButton>
 

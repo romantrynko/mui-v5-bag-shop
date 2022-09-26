@@ -6,8 +6,7 @@ import { ListItemText } from '@mui/material';
 import { Box, Grid, List, Typography } from '@mui/material';
 import { Facebook, Twitter, Instagram, Send } from '@mui/icons-material';
 
-const Footer = () =>
-{
+const Footer = () => {
   return (
     <Box
       sx={{
@@ -18,7 +17,9 @@ const Footer = () =>
         },
         pt: 12,
         pb: 12,
-        fonSize: { xs: '12px', md: '14px' }
+        fontSize: { xs: '12px', md: '14px' },
+        mb: { xs: '50px', md: 0 },
+        mt: { xs: '50px', md: '40px' },
       }}
     >
       <Grid container spacing={2} justifyContent={'center'}>
@@ -111,7 +112,7 @@ const Footer = () =>
           </Stack>
         </Grid>
       </Grid>
-    </Box >
+    </Box>
   )
 }
 
