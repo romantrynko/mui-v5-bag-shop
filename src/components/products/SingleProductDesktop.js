@@ -10,10 +10,14 @@ import {
   ProductAddToCart
 } from '../../styles/products';
 import ProductMeta from './ProductMeta'
+import useDialogModal from '../../hooks/useDialogModal';
+import ProductDetails from '../product-detail';
 
 const SingleProductDesktop = ({ product, matches }) => {
 
   const [showOptions, setShowOptions] = useState(false);
+
+  const [ProductDetailDialog, showProductDetailDialog, closeProductDetailDialog] = useDialogModal(ProductDetails)
 
   const handleMouseEnter = () => {
     setShowOptions(true)
@@ -24,7 +28,7 @@ const SingleProductDesktop = ({ product, matches }) => {
   }
 
   return (
-    <>
+    <React.Fragment>
       <Product
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -50,7 +54,7 @@ const SingleProductDesktop = ({ product, matches }) => {
               <Share color='primary' />
             </ProductActionButton>
 
-            <ProductActionButton>
+            <ProductActionButton onClick={() => showProductDetailDialog()}>
               <Subject color='primary' />
             </ProductActionButton>
           </Stack>
@@ -58,9 +62,10 @@ const SingleProductDesktop = ({ product, matches }) => {
 
       </Product>
 
-      
+      <ProductDetailDialog product={product} />
+
       <ProductMeta product={product} matches={matches} />
-    </>
+    </React.Fragment>
   )
 }
 
